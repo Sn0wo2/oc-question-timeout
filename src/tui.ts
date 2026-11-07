@@ -4,7 +4,7 @@ export default Plugin.define({
   id: "oc-question-timeout",
   setup(ctx) {
     const raw: unknown = ctx.options.seconds
-    if (raw !== undefined && (typeof raw !== "number" || !Number.isInteger(raw) || raw < 1))
+    if (raw !== undefined && (typeof raw !== "number" || !Number.isInteger(raw) || raw < 1 || raw > 2_147_483))
       throw new Error(`oc-question-timeout: invalid "seconds" option: ${JSON.stringify(raw)}`)
 
     const timers = new Map<string, ReturnType<typeof setTimeout>>()
