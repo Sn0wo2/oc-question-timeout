@@ -1,0 +1,47 @@
+{
+  "name": "oc-question-timeout",
+  "version": "0.0.0",
+  "description": "Auto-answers OpenCode TUI question prompts with their first option after a timeout",
+  "type": "module",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sn0wo2/oc-question-timeout.git"
+  },
+  "author": "Me0wo",
+  "keywords": [
+    "opencode",
+    "opencode2",
+    "opencode-plugin"
+  ],
+  "packageManager": "bun@1.4.4",
+  "engines": {
+    "node": ">=24"
+  },
+  "files": [
+    "src"
+  ],
+  "exports": {
+    "./tui": "./src/tui.ts"
+  },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "lint": "biome check --error-on-warnings .",
+    "lint:fix": "biome check --write --error-on-warnings .",
+    "security": "bun audit --registry=https://registry.npmjs.org",
+    "ci": "bun run lint && bun run check && bun run security"
+  },
+  "dependencies": {
+    "@opencode/plugin": "2.2.5",
+    "solid-js": ">=1.9.0"
+  },
+  "overrides": {
+    "glob": "14.0.3",
+    "minimatch": "11.0.4"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.6.6",
+    "@types/bun": "^1.4.4",
+    "typescript": "^7.0.2"
+  }
+}
