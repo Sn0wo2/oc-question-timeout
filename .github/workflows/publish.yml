@@ -42,7 +42,9 @@ jobs:
 
       - name: Normalize version
         id: version
-        run: bun scripts/normalize-release-version.js "${{ inputs.version || github.ref_name }}"
+        env:
+          RELEASE_REF: ${{ inputs.version || github.ref_name }}
+        run: bun scripts/normalize-release-version.js "$RELEASE_REF"
 
       - name: Check for an already published release
         id: release
