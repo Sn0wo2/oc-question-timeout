@@ -1,6 +1,6 @@
 {
   "name": "oc-question-timeout",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Automatically answer OpenCode TUI question prompts with their first option after a timeout",
   "type": "module",
   "license": "Apache-2.0",
