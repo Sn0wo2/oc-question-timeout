@@ -12,7 +12,8 @@
   "keywords": [
     "opencode",
     "opencode2",
-    "opencode-plugin"
+    "opencode-plugin",
+    "opencode2-plugin"
   ],
   "packageManager": "bun@1.4.4",
   "engines": {
